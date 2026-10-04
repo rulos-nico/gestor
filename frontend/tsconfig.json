@@ -7,18 +7,5 @@
     {
       "path": "./tsconfig.app.json"
     }
-  ],
-  "compilerOptions":{
-  "ignoreDeprecations":"6.0",
-  "baseUrl":".",
-  "path":{
-	  "@app/*":["./src/app/*"],
-	  "@entities/*":["./src/entities/*"],
-	  "@feature/*":["./src/features/*"],
-	  "@pages/*":["./src/pages/*"],
-	  "@shared/*":["./src/shared/*"],
-	  "@widgets/*":["./src/widgets/*"],
-	  "@/*":["./src/*"]
-	}
-}
+  ]
 }
