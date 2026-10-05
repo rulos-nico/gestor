@@ -1,14 +1,10 @@
-import { createApp } from 'vue'
-import pinia from './provider/pinia'
-import router from './provider/router'
-import App from './App.vue'
-import './styles/base.css'
+import { type App } from 'vue'
 
-export function setupApp() {
-  const app = createApp(App)
+import { pinia } from '@app/provider/pinia'
+import { router } from '@app/provider/router'
 
+export function installProviders(app: App): void {
   app.use(pinia)
   app.use(router)
-
-  return app
 }
+
