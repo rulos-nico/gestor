@@ -5,15 +5,8 @@ export const router = createRouter({
   history: createWebHistory(),
   routes,
 })
+router.addRoute({path:'/pages',redirect:'/pages'})
 
-function addRedirects() {
-  router.addRoute({
-    path: '/home',
-    redirect: '/home',
-  })
-}
-
-addRedirects()
 
 if (import.meta.hot) {
   handleHotUpdate(router)

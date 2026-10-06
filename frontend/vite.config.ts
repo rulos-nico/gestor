@@ -3,11 +3,13 @@ import { defineConfig } from 'vite'
 import VueRouter from 'vue-router/vite'
 import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
+import tailwindcss from '@tailwindcss/vite'
 const alias = (path: string) => fileURLToPath(new URL(path, import.meta.url))
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
+    tailwindcss(),
     VueRouter(),
     vue(),
     vueDevTools(),

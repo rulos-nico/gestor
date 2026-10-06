@@ -1,14 +1,7 @@
-<script lang="ts">
-  import {useRoute} from 'vue-router'
-  import {AppShell} from '@widgets'
-  const route = useRoute()
-
-
+<script setup lang="ts">
+import { AppShell } from '@widgets'
 </script>
 
 <template>
-  <AppShell/>
+  <AppShell />
 </template>
-
-
-

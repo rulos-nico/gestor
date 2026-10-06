@@ -3,8 +3,6 @@ import { FileText, FlaskConical, HardHat, LayoutDashboard, Settings } from 'luci
 
 import { RouterLink, useRoute } from 'vue-router'
 
-// import logoFull from '@/shared/assets/Logos/LOGO_INGETEC_P_AZUL.png'
-// import logoSymbol from '@/shared/assets/Logos/SIMBOLO_INGETEC_P_AZUL.png'
 import {
   SidebarContent,
   SidebarGroup,
@@ -23,7 +21,7 @@ const items = [
   {
     title: 'Dashboard',
     icon: LayoutDashboard,
-    to: '/home',
+    to: '/Dashboard',
   },
   {
     title: 'Facturación',
@@ -55,8 +53,12 @@ function isActive(path: string) {
 <template>
   <SidebarHeader class="border-b border-sidebar-border px-3 py-4">
     <div class="flex items-center justify-center px-2">
-      <img v-if="state === 'collapsed'" :src="logoSymbol" alt="Ingetec" class="h-9 w-auto" />
-      <img v-else :src="logoFull" alt="Ingetec" class="h-9 w-auto" />
+      <span
+        class=""
+        :class="state === 'collapsed' ? 'text-base' : 'text-lg'"
+      >
+        {{ state === 'collapsed' ? 'N' : 'N/A' }}
+      </span>
     </div>
   </SidebarHeader>
   <SidebarContent>
@@ -81,4 +83,3 @@ function isActive(path: string) {
     </SidebarGroup>
   </SidebarContent>
 </template>
-
